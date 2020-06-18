@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">YourTrad</string>
     <color name="Tollens_nuit_polaire">#3F475D</color>
+    <string name="account">Mon compte</string>
+    <string name="language">Langues</string>
+    <string name="contactus">Contactez-nous</string>
 </resources>
