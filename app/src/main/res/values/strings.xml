@@ -4,4 +4,14 @@
     <string name="account">Mon compte</string>
     <string name="language">Langues</string>
     <string name="contactus">Contactez-nous</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">Valider</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Bienvenue !"</string>
+    <string name="invalid_username">Utilisateur inconnu! Créez un nouveau compte</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Echec de connexion"</string>
 </resources>
