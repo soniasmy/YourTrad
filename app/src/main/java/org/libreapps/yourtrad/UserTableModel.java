@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class UserTableModel {
     private String[] columnsNames = {"Id", "Nom", "Prenom", "Email", "Password"};
 
-    private ArrayList<User> listUsers = new ArrayList<User>();
+    private ArrayList<User> usersList = new ArrayList<User>();
     private ConnectionRest connectionRest = null;
 
     public UserTableModel() {
