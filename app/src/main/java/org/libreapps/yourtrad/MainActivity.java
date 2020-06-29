@@ -9,8 +9,6 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.libreapps.yourtrad.ui.login.LoginActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, InscriptionActivity.class);
                 startActivity(intent);
             }
         });

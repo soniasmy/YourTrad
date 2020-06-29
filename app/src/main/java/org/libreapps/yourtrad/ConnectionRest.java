@@ -19,7 +19,7 @@ import static android.net.wifi.WifiConfiguration.Status.strings;
 
 public class ConnectionRest extends AsyncTask {
 
-    private final static String URL = "https://api.munier.me/apmk/yourTrad/";
+    private final static String URL = "https://api.munier.me/apmk/";
     private JSONObject jsonObj = null;
 
     @Override
@@ -85,6 +85,14 @@ public class ConnectionRest extends AsyncTask {
             response.append(line).append('\n');
         }
         return response.toString();
+    }
+
+    public void setJsonObj(JSONObject jsonObj){
+        this.jsonObj = jsonObj;
+    }
+
+    protected void onPostExecute(String s) {
+        super.onPostExecute(s);
     }
 }
 
