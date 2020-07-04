@@ -12,21 +12,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.libreapps.yourtrad.ui.login.LoginActivity;
+
+//import org.libreapps.yourtrad.ui.login.LoginActivity;
 
 public class InscriptionActivity extends AppCompatActivity {
-
-    final EditText nameEditTxt = (EditText) findViewById(R.id.name);
-    final EditText firstNameEditTxt = (EditText) findViewById(R.id.firstname);
-    final EditText emailEditTxt = (EditText) findViewById(R.id.email);
-    final EditText passwordEditTxt = (EditText) findViewById(R.id.password);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription);
 
+        final EditText nameEditTxt = (EditText) findViewById(R.id.name);
+        final EditText firstNameEditTxt = (EditText) findViewById(R.id.firstname);
+        final EditText emailEditTxt = (EditText) findViewById(R.id.email);
+        final EditText passwordEditTxt = (EditText) findViewById(R.id.password);
+
         Button buttonOk = (Button) findViewById(R.id.buttonValidate);
+        /*
         buttonOk.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -49,6 +51,7 @@ public class InscriptionActivity extends AppCompatActivity {
                 }
             }
         });
+        */
     }
 
     @Override
