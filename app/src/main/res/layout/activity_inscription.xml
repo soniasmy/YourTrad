@@ -4,147 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@color/Tollens_nuit_polaire"
     android:textColor="#FFFFFF"
     tools:context=".InscriptionActivity">
 
-    <EditText
-        android:id="@+id/passwordconfirmation"
-        android:layout_width="356dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="110dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Confirmer le mot de passe"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="356dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginRight="27dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Mot de passe"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/passwordconfirmation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+    <LinearLayout
+        android:id="@+id/linear_layout_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/firstname"
-        android:layout_width="356dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="9dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Prénom"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        <TextView
+            android:id="@+id/textview_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:text="@string/title_activity_register"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintTop_toBottomOf="parent" />
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="356dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="19dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nom"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/firstname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        <ImageView
+            android:id="@+id/imageview_logo"
+            android:layout_width="match_parent"
+            android:layout_height="255dp"
+            app:layout_constraintTop_toBottomOf="@+id/textview_register"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_username"
+            app:srcCompat="@drawable/logo_multilanguage" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:textColor="#FFFFFF"
-        android:text="Inscription"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/edittext_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/prompt_first_name"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/imageview_logo"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_lastname" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="154dp"
-        android:layout_height="184dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginLeft="133dp"
-        android:layout_marginTop="14dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/logo_multilanguage" />
+        <EditText
+            android:id="@+id/edittext_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/prompt_last_name"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_firstname"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_email" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="356dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginRight="27dp"
-        android:layout_marginBottom="14dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Email"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstname" />
 
-    <Button
-        android:id="@+id/buttonValidate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginRight="175dp"
-        android:layout_marginBottom="30dp"
-        android:text="Valider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordconfirmation" />
+        <EditText
+            android:id="@+id/edittext_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Email"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_lastname"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_password" />
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Mot de passe"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_email"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_password_confirmation"/>
+
+        <!--
+        <EditText
+            android:id="@+id/edittext_password_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Confirmer le mot de passe"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_password"
+            app:layout_constraintBottom_toTopOf="@+id/button_validate"/>
+        -->
+
+        <Button
+            android:id="@+id/button_validate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/prompt_validate"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_password" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

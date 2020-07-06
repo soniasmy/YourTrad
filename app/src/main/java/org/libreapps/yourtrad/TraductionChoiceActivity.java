@@ -15,13 +15,13 @@ public class TraductionChoiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traduction_choice);
 
-        final EditText emailEditTxt = (EditText) findViewById(R.id.username);
-        final EditText passwordEditTxt = (EditText) findViewById(R.id.password);
+        final EditText emailEditText = (EditText) findViewById(R.id.edittext_email);
+        final EditText passwordEditText = (EditText) findViewById(R.id.edittext_password);
 
-        Button buttonOk = (Button) findViewById(R.id.login);
+        Button buttonLogin = (Button) findViewById(R.id.button_login);
 
         /*
-        buttonOk.setOnClickListener(new View.OnClickListener() {
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

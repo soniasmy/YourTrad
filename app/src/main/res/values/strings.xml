@@ -1,17 +1,27 @@
 <resources>
     <string name="app_name">YourTrad</string>
-    <color name="Tollens_nuit_polaire">#3F475D</color>
+    <color  name="Tollens_nuit_polaire">#3F475D</color>
     <string name="account">Mon compte</string>
     <string name="language">Langues</string>
     <string name="contactus">Contactez-nous</string>
 
     <string name="title_activity_login">Connexion</string>
+    <string name="title_activity_register">Inscription</string>
+
+    <string name="prompt_first_name">Prénom</string>
+    <string name="prompt_last_name">Nom</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Mot de passe</string>
-    <string name="action_sign_in">Valider</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Bienvenue !"</string>
+    <string name="prompt_validate">Valider</string>
+    <string name="prompt_translate_from">Traduire depuis</string>
+    <string name="prompt_translate_to">Vers</string>
+    <string name="prompt_next">Suivant</string>
+    <string name="prompt_traduction_level">Niveau de traduction</string>
+
+    <string name="action_login">Se connecter</string>
+    <string name="action_register">S\'inscrire</string>
+    <string name="welcome">"Bienvenue sur YourTrad"</string>
     <string name="invalid_username">Utilisateur inconnu! Créez un nouveau compte</string>
-    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="invalid_password">Mot de passe invalide</string>
     <string name="login_failed">"Echec de connexion"</string>
 </resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/level1"
+        android:layout_width="180dp"
+        android:layout_height="245dp"
+        android:layout_gravity="start"
+        android:enabled="true"
+        android:text="Niveau 1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <Button
+        android:id="@+id/level2"
+        android:layout_width="169dp"
+        android:layout_height="241dp"
+        android:layout_gravity="start"
+        android:enabled="true"
+        android:text="Niveau 2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/level3"
+        android:layout_width="174dp"
+        android:layout_height="274dp"
+        android:layout_gravity="start"
+        android:enabled="true"
+        android:text="Niveau 3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <Button
+        android:id="@+id/level4"
+        android:layout_width="161dp"
+        android:layout_height="271dp"
+        android:layout_gravity="start"
+        android:enabled="true"
+        android:text="Niveau 4"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
