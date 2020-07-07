@@ -1,0 +1,108 @@
+package org.libreapps.yourtrad;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
+
+public class InscriptionActivity extends AppCompatActivity {
+
+    private EditText userLastname, userFirstname, userPassword, userEmail, userConfirmpassword;
+    private Button buttonRegistration;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_inscription);
+
+        userLastname = (EditText) findViewById(R.id.reg_user_lastname);
+        userFirstname = (EditText) findViewById(R.id.reg_user_firstname);
+        userEmail = (EditText) findViewById(R.id.reg_user_email);
+        userPassword = (EditText) findViewById(R.id.reg_user_password);
+        userConfirmpassword = (EditText) findViewById(R.id.reg_user_confirm_password);
+        buttonRegistration = (Button) findViewById(R.id.btn_register_2);
+
+        buttonRegistration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    ConnectionRest connectionRest = new ConnectionRest();
+                    JSONObject jsonAuthentification = new JSONObject();
+                    jsonAuthentification.put("nom", userLastname.getText());
+                    jsonAuthentification.put("prenom", userFirstname.getText());
+                    jsonAuthentification.put("email", userEmail.getText());
+                    jsonAuthentification.put("mot de passe", userPassword.getText());
+                    jsonAuthentification.put("confirmer le mot de passe", userConfirmpassword.getText());
+                    jsonAuthentification.put("licence", "MNA-1A-5U-1");
+                    connectionRest.setObj(jsonAuthentification);
+                    connectionRest.execute("CREATE_USER");
+                    String token = (String) ConnectionRest.get();
+
+                    if (token.charAt(0) == '{') {
+                        Log.v("LoginActivity", token);
+                    } else {
+                        Intent intent = new Intent(InscriptionActivity.this, LoginActivity.class);
+                        intent.putExtra("token", token);
+                        startActivity(intent);
+                    }
+                } catch (JSONException e1) {
+                    Log.v("TAG", "[JSONException] e : " + e1.getMessage());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+        private void checkDataEntered()
+        {
+            if(isEmpty(userLastname))
+            {
+                userLastname.setError("Veuillez entrez votre nom");
+            }
+
+            if(isEmpty(userFirstname))
+            {
+                userFirstname.setError("Veuillez entrez votre prénom");
+            }
+
+            if(isEmpty(userEmail) == false)
+            {
+                userEmail.setError("Veuillez entrez votre adresse email");
+            }
+
+            if(isEmpty(userPassword))
+            {
+                userPassword.setError("Veuillez entrez un mot de  passe");
+            }
+
+            if(isEmpty(userConfirmpassword))
+            {
+                userConfirmpassword.setError("Veuillez confirmer le mot de passe");
+
+                if (!userConfirmpassword.equals(userPassword))
+                {
+                    Toast.makeText(this, "Confirmation de mot de passe incorrect", Toast.LENGTH_LONG).show();
+                }
+            }
+
+        }
+    }
+
+
+
