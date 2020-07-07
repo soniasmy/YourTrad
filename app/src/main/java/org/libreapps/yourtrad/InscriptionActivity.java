@@ -12,26 +12,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.libreapps.yourtrad.ui.login.LoginActivity;
+
+//import org.libreapps.yourtrad.ui.login.LoginActivity;
 
 public class InscriptionActivity extends AppCompatActivity {
-
-    final EditText nameEditTxt = (EditText) findViewById(R.id.name);
-    final EditText firstNameEditTxt = (EditText) findViewById(R.id.firstname);
-    final EditText emailEditTxt = (EditText) findViewById(R.id.email);
-    final EditText passwordEditTxt = (EditText) findViewById(R.id.password);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription);
 
-        Button buttonOk = (Button) findViewById(R.id.buttonValidate);
-        buttonOk.setOnClickListener(new View.OnClickListener() {
+        final EditText firstNameEditText = (EditText) findViewById(R.id.edittext_firstname);
+        final EditText lastNameEditText = (EditText) findViewById(R.id.edittext_lastname);
+        final EditText emailEditText = (EditText) findViewById(R.id.edittext_email);
+        final EditText passwordEditText = (EditText) findViewById(R.id.edittext_password);
+
+        Button buttonValidate = (Button) findViewById(R.id.button_validate);
+
+        buttonValidate.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                try {
+                //try {
+                    /*
                     ConnectionRest connectionRest = new ConnectionRest();
                     JSONObject user = new JSONObject();
                     user.put("nom", nameEditTxt.getText().toString());
@@ -39,16 +42,17 @@ public class InscriptionActivity extends AppCompatActivity {
                     user.put("email", emailEditTxt.getText().toString());
                     user.put("password", passwordEditTxt.getText().toString());
                     connectionRest.setJsonObj(user);
-
                     connectionRest.execute("POST");
+                    */
 
                     Intent intent = new Intent(InscriptionActivity.this, LoginActivity.class);
                     startActivity(intent);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                //} catch (Exception e) {
+                  //  e.printStackTrace();
+                //}
             }
         });
+
     }
 
     @Override
