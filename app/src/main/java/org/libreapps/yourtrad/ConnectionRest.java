@@ -3,8 +3,10 @@ package org.libreapps.yourtrad;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.libreapps.yourtrad.obj.User;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,6 +16,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 
 import static android.net.wifi.WifiConfiguration.Status.strings;
 
@@ -93,6 +96,20 @@ public class ConnectionRest extends AsyncTask {
 
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
+    }
+
+    public ArrayList<User> parse(final String json) {
+        try {
+            final ArrayList users = new ArrayList<>();
+            final JSONArray jUserArray = new JSONArray(json);
+            for (int i = 0; i < jUserArray.length(); i++) {
+                users.add(new User(jUserArray.optJSONObject(i)));
+            }
+            return users;
+        } catch (JSONException e) {
+            Log.v("TAG","[JSONException] e : " + e.getMessage());
+        }
+        return null;
     }
 }
 

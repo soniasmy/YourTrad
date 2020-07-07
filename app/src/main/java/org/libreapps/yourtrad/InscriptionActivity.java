@@ -10,10 +10,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.json.JSONException;
 import org.json.JSONObject;
-
-//import org.libreapps.yourtrad.ui.login.LoginActivity;
 
 public class InscriptionActivity extends AppCompatActivity {
 
@@ -33,23 +30,23 @@ public class InscriptionActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //try {
-                    /*
+                try {
+
                     ConnectionRest connectionRest = new ConnectionRest();
                     JSONObject user = new JSONObject();
-                    user.put("nom", nameEditTxt.getText().toString());
-                    user.put("prenom", firstNameEditTxt.getText().toString());
-                    user.put("email", emailEditTxt.getText().toString());
-                    user.put("password", passwordEditTxt.getText().toString());
+                    user.put("nom", lastNameEditText.getText().toString());
+                    user.put("prenom", firstNameEditText.getText().toString());
+                    user.put("email", emailEditText.getText().toString());
+                    user.put("password", passwordEditText.getText().toString());
                     connectionRest.setJsonObj(user);
                     connectionRest.execute("POST");
-                    */
+
 
                     Intent intent = new Intent(InscriptionActivity.this, LoginActivity.class);
                     startActivity(intent);
-                //} catch (Exception e) {
-                  //  e.printStackTrace();
-                //}
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 

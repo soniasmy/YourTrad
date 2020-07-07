@@ -59,7 +59,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageview_logo" />
 
         <EditText
-            android:id="@+id/edittext_password"
+            android:id="@+id/edittxt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -79,7 +79,7 @@
             android:layout_gravity="start"
             android:enabled="true"
             android:text="@string/action_login"
-            app:layout_constraintTop_toBottomOf="@+id/edittext_password" />
+            app:layout_constraintTop_toBottomOf="@+id/edittxt_password" />
 
         <ProgressBar
             android:id="@+id/progressbar_loading"
@@ -92,8 +92,8 @@
             android:layout_marginBottom="64dp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/edittext_password"
-            app:layout_constraintStart_toStartOf="@+id/edittext_password"
+            app:layout_constraintEnd_toEndOf="@+id/edittxt_password"
+            app:layout_constraintStart_toStartOf="@+id/edittxt_password"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3" />
 
